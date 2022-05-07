@@ -1,0 +1,24 @@
+{
+    "name": "modem_reboot_server",
+    "version": "0.0.1",
+    "description": "Reboot modem huawei e3372",
+    "main": "server.js",
+    "scripts": {
+        "newkey": "node ./lib/modemApi.js",
+        "start": "node ./lib/server.js"
+    },
+    "keywords": [
+        "reboot",
+        "modem",
+        "reboot",
+        "huawei",
+        "e3372"
+    ],
+    "author": "liteCarma <liteCarma@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "chalk": "^4.1.1",
+        "proxy-agent": "^3.1.1",
+        "tcp-port-used": "^1.0.1"
+    }
+}

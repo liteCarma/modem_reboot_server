@@ -1,0 +1,33 @@
+{
+  "main": {
+    "serverIp": "127.0.0.1",
+    "serverPort": 30000
+  },
+  "clients": {
+    "5076c4d70dd6e3f884f222892af155b0166067cfd4236d800755dd727cfa11cc": [
+      {
+        "options": {
+          "id": "11",
+          "on": true,
+          "network": "lte:umts",
+          "login": "admin",
+          "password": "Fkbufnjh-11",
+          "ip_web": "192.168.8.1",
+          "ip": "192.168.8.100",
+          "timeout": 0
+        },
+        "proxy": {
+          "login": "ASDkjm233",
+          "password": "DS3223dsa",
+          "protocol": "http",
+          "port": 30001
+        },
+        "info": {
+          "phone": "79504797673",
+          "operator": "tele2",
+          "region": "novosibirsk"
+        }
+      }
+    ]
+  }
+}
