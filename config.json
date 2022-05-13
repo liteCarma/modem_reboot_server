@@ -1,6 +1,6 @@
 {
   "main": {
-    "serverIp": "127.0.0.1",
+    "serverIp": "0.0.0.0",
     "serverPort": 30000
   },
   "clients": {
@@ -17,8 +17,8 @@
           "timeout": 0
         },
         "proxy": {
-          "login": "ASDkjm233",
-          "password": "DS3223dsa",
+          "login": "",
+          "password": "",
           "protocol": "http",
           "port": 30001
         },

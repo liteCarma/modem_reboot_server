@@ -5,8 +5,7 @@ const { exec } = require('child_process');
 const { check: tcpPortUsed } = require('tcp-port-used');
 const config = require('../../config.json');
 
-let proxyPath = path.resolve('./bin/3proxy/' + os.arch())
-
+const proxyConfigPath = `${os.tmpdir()}/3proxy.cfg`
 module.exports = async function() {
     let template = templateGlob;
     const clients = config.clients;
@@ -26,7 +25,7 @@ module.exports = async function() {
           }
         }
     }
-    fs.writeFileSync(`${proxyPath}/3proxy.cfg`, template);
+    fs.writeFileSync(proxyConfigPath, template);
     return runProxyProcess();
 }
 
@@ -63,7 +62,7 @@ flush
 }
 
 function runProxyProcess() {
-    let proxy = exec('3proxy', { cwd: proxyPath });
+    let proxy = exec(`3proxy ${proxyConfigPath}`);
     proxy.on('exit', function(code) {
         console.error(`3proxy close, code: ${code}`);
         process.exit(1)
